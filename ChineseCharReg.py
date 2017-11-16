@@ -4,7 +4,7 @@
 # import PIL.Image
 
 # os.chdir("D:\data\ChineseWriterData")
-# train_data_dir = "HWDB1.1trn_gnt_P1"
+# train_data_dir = "HWDB1.1trn_gnt_P1" 
 # test_data_dir = "HWDB1.1tst_gnt"
  
 # # 读取图像和对应的汉字
