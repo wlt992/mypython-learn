@@ -10,7 +10,7 @@ driver = webdriver.Firefox() #初始化浏览器，用于抓取动态数字
 second_hand_page_url = pd.DataFrame(columns = ["url"])
 
 #初始化抓取的房源信息列表
-second_hand_page_infor = pd.DataFrame(columns = ["楼层",  "位置", "年代",
+second_hand_page_infor = pd.DataFrame(columns = ["小区",  "位置", "年代",
                                                  "房型", "面积", "朝向",
                                                  "楼层", "装修程度", "房屋单价", 
                                                  "参考首付", "参考月供", "总价", "url"])
@@ -158,4 +158,7 @@ while url != 'none' :
     url = get_next_url(page_code)
       
 get_total_infor()
+<<<<<<< HEAD
 # second_hand_page_infor.to_csv(result.cs)
+=======
+>>>>>>> a7eb4ac300a766d8f402197baf193d0961245662
