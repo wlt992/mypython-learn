@@ -145,7 +145,7 @@ def replace_none(str):
     return  str
 
 
-
+# def main(url):
 url = 'https://shanghai.anjuke.com/sale/changning/'
 page_code = get_page_code(url)
 get_page_url(page_code)
@@ -158,3 +158,4 @@ while url != 'none' :
     url = get_next_url(page_code)
       
 get_total_infor()
+# second_hand_page_infor.to_csv(result.cs)
