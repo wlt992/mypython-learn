@@ -4,3 +4,4 @@
 - [中文手写文字识别](http://blog.topspeedsnail.com/archives/10897)
 - Embedding参考文章：[学习Tensorflow的Embeddings例子](https://liusida.github.io/2016/11/14/study-embeddings/)
 - lstm参考文章：[学习Tensorflow的LSTM的RNN例子](https://liusida.github.io/2016/11/16/study-lstm/)
+- [Genarate Poetry](http://blog.topspeedsnail.com/archives/10542)
