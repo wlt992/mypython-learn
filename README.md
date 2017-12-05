@@ -5,3 +5,5 @@
 - Embedding参考文章：[学习Tensorflow的Embeddings例子](https://liusida.github.io/2016/11/14/study-embeddings/)
 - lstm参考文章：[学习Tensorflow的LSTM的RNN例子](https://liusida.github.io/2016/11/16/study-lstm/)
 - [Genarate Poetry](http://blog.topspeedsnail.com/archives/10542)
+- AI游戏, 参考(http://blog.topspeedsnail.com/archives/10459),有修改
+- [Deep Q Learning-reinforcement](https://github.com/JannesKlaas/sometimes_deep_sometimes_learning)
