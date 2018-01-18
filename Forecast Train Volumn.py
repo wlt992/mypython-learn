@@ -39,10 +39,10 @@ def ass_rnn(hidden_layer_size=6):
 						[tf.shape(X)[0], 1, 1]) # tf.tile([1,hidden_layer_size,1],[None,1,1]): [None,hidden_layer_size,1]
 	out = tf.matmul(outputs, W_repeated) + b # [None, seq_size, 1]
 	out = tf.squeeze(out) # out.shape: [None, seq_size]
-	return out
+	return X, Y, out
 
 def train_rnn():
-	out = ass_rnn()
+	X, Y, out = ass_rnn()
 	loss = tf.reduce_mean(tf.square(out - Y))
 	train_op = tf.train.AdamOptimizer(learning_rate=0.003).minimize(loss)
 
@@ -61,7 +61,7 @@ def train_rnn():
 train_rnn()
 
 def prediction():
-	out = ass_rnn()
+	X, Y, out = ass_rnn()
 
 	saver = tf.train.Saver(tf.global_variables())
 	with tf.Session() as sess:
@@ -78,6 +78,11 @@ def prediction():
 		plt.figure()
 		plt.plot(list(range(len(normalized_data))), normalized_data, color='b')
 		plt.plot(list(range(len(normalized_data) - len(predict), len(normalized_data))), predict, color='r')
+		plt.show()
+
+		plt.figure()
+		plt.plot(list(range(len(normalized_data))), y*np.std(data)+np.mean(data), color='b')
+		plt.plot(list(range(len(normalized_data) - len(predict), len(normalized_data))), np.dot(predict, np.std(data))+np.mean(data), color='r')
 		plt.show()
 		return normalized_data, predict
 
